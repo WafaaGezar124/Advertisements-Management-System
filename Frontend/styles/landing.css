@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+/*  Base  */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     overflow: hidden;
 }
 
-/* ===== Landing Section ===== */
+/*Landing Section */
 .landing {
     position: relative;
     width: 100%;
@@ -21,7 +21,7 @@ body {
     overflow: hidden;
 }
 
-/* ===== Slideshow ===== */
+/*  Slideshow  */
 .slideshow {
     position: absolute;
     top: 0;
@@ -44,7 +44,7 @@ body {
     will-change: opacity, transform;
 }
 
-/* تأخير كل صورة 3 ثواني */
+
 .slide:nth-child(1) {
     animation-delay: 0s;
 }
@@ -101,7 +101,7 @@ body {
     animation-delay: 39s;
 }
 
-/* ===== Animation ===== */
+/*  Animation  */
 @keyframes fadeSlide {
     0% {
         opacity: 0;
@@ -129,7 +129,7 @@ body {
     }
 }
 
-/* ===== Overlay and Text ===== */
+/*  Overlay and Text  */
 .overlay {
     position: absolute;
     top: 0;
@@ -161,7 +161,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* ===== Buttons ===== */
+/*  Buttons */
 .buttons {
     display: flex;
     justify-content: center;
@@ -194,7 +194,7 @@ body {
     color: #fff;
 }
 
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 768px) {
     .text-box h1 {
         font-size: 34px;

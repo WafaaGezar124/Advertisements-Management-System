@@ -2,14 +2,10 @@ footer {
     text-align: center;
     padding: 15px;
     background: transparent;
-    /* شفاف تمامًا */
-    color: #eee;
+    color: #444;
     font-size: 14px;
     position: relative;
     border: none;
-    /* شيل أي حدود */
     box-shadow: none;
-    /* شيل أي ظل */
     outline: none;
-    /* شيل التحديد */
 }

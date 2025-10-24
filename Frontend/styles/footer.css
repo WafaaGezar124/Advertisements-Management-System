@@ -7,11 +7,8 @@ footer {
     text-align: center;
     color: rgba(255, 255, 255, 0.85);
     ;
-    /* لون النص */
     background: #256D6F;
-    /* خلفية تركواز صريحة */
     border-top: none;
-    /* مفيش خط فاصل */
     z-index: 3;
     font-size: 14px;
 }

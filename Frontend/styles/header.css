@@ -5,18 +5,14 @@ header nav {
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    /* خليه شفاف خالص */
     color: #666;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
     border: none;
-    /* اتأكدي إن مفيش أي حدود */
     box-shadow: none;
-    /* ولو في ظل شيله كمان */
     outline: none;
-    /* يمنع أي تحديد خارجي */
 }
 
 header ul {
@@ -36,5 +32,4 @@ header ul li a {
 header ul li a:hover,
 header ul li a.active {
     color: #256D6F;
-    /* لون مميز عند المرور */
 }

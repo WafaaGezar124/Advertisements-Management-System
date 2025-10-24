@@ -6,7 +6,7 @@ body {
 
 
 
-/* ======= authentication Section (Updated) ======= */
+/* authentication Section  */
 .authentication-container {
     flex: 1;
     display: flex;
@@ -14,7 +14,6 @@ body {
     align-items: center;
     position: relative;
     margin-top: 165px;
-    /* نزل الفورم لتحت عشان الكلام في الصورة يبان */
 }
 
 .overlay {
@@ -27,15 +26,12 @@ body {
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.1);
-    /* نفس شفافية ولون الـ navbar */
     padding: 40px;
     width: 380px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    /* ظل ناعم وواقعي */
     text-align: left;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    /* تحديد أبيض بسيط زي navbar */
 }
 
 .authentication-box h2 {
@@ -45,8 +41,6 @@ body {
     font-weight: 600;
     color: #256D6F;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.15);
-
-    /* عشان يبقى واضح على الخلفية */
 }
 
 .authentication-box label {
@@ -60,20 +54,26 @@ body {
 .authentication-box select {
     width: 100%;
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
     outline: none;
     background: transparent;
-    /* شفاف */
     color: #444;
-    /* النص أبيض */
+    transition: all 0.2s ease;
 }
 
+.authentication-box input:focus,
+.authentication-box select:focus {
+    border-color: #256D6F;
+    box-shadow: 0 0 0 3px rgba(37, 109, 111, 0.1);
+    color: #256D6F;
+}
+
+
 .authentication-box input::placeholder {
-    color: #999;
-    ;
-    ;
+    color: #bbb;
+    opacity: 0.9;
 }
 
 .authentication-box select option {
@@ -117,25 +117,18 @@ body {
 
 .links span {
     color: #444;
-    /* نفس لون النصوص */
     font-size: 14px;
     margin-right: 6px;
-    /* مسافة بسيطة قبل كلمة Sign up */
 }
 
-/* لون وتنسيق كلمة Sign up فقط */
 .links a:last-child {
     color: #256D6F;
-    /* دهبي فاتح */
     font-weight: 600;
-    /* تخليها بارزة شوية */
     text-decoration: none;
     transition: 0.3s;
 }
 
-/* تأثير عند مرور الماوس */
 .links a:last-child:hover {
     text-decoration: underline;
     color: #256D6F;
-    /* لون أفتح عند hover */
 }
