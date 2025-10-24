@@ -1,0 +1,40 @@
+header nav {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    /* خليه شفاف خالص */
+    color: #666;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border: none;
+    /* اتأكدي إن مفيش أي حدود */
+    box-shadow: none;
+    /* ولو في ظل شيله كمان */
+    outline: none;
+    /* يمنع أي تحديد خارجي */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+
+header ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    color: #256D6F;
+    /* لون مميز عند المرور */
+}
