@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +11,8 @@
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer_auth.css" />
     <link rel="stylesheet" href="../styles/authentication.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 
 
 </head>
@@ -29,7 +32,12 @@
                 <input type="email" id="email" placeholder="Enter your email" required />
 
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required />
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required />
+                    <span class="toggle-password" onclick="togglePassword('password', this)">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
 
                 <label for="role">Role</label>
                 <select id="role" required>
@@ -41,7 +49,7 @@
                 </select>
 
                 <button type="submit">Login</button>
-
+                <p class="form-message"></p>
                 <div class="links">
                     <a href="Forget Password.html">Forgot Password?</a> |
                     <span>Don’t have an account?</span>
@@ -54,6 +62,7 @@
 
     <footer></footer>
     <script src="../scripts/load header & footer.js"></script>
+    <script src="../scripts/main.js"></script>
 
 
 </body>

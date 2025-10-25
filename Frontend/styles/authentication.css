@@ -132,3 +132,58 @@ body {
     text-decoration: underline;
     color: #256D6F;
 }
+
+/* ========================= */
+/*   FORM MESSAGE STYLING    */
+/* ========================= */
+.form-message {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    /* مخفي افتراضيًا */
+}
+
+.form-message.error {
+    display: block;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #d33;
+    border: 1px solid #d33;
+}
+
+.form-message.success {
+    display: block;
+    background-color: rgba(37, 109, 111, 0.1);
+    color: #256D6F;
+    border: 1px solid #256D6F;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+    /* مساحة للأيقونة */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #256D6F;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
