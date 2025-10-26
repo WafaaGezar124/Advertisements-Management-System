@@ -12,3 +12,23 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* ====== form message (success & error) ====== */
+.form-message {
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+    text-align: center;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.error {
+    color: #d9534f;
+    /* أحمر للخطأ */
+}
+
+.form-message.success {
+    color: #28a745;
+    /* أخضر للنجاح */
+}

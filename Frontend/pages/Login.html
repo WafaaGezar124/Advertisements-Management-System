@@ -9,8 +9,9 @@
 
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/footer_auth.css" />
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
     <link rel="stylesheet" href="../styles/authentication.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 
@@ -19,38 +20,46 @@
 
 <body>
 
+
     <header></header>
 
-    <!--  Login Section-->
-    <main class="authentication-container">
-        <div class="overlay"></div>
-
-        <div class="authentication-box">
+    <!-- 🧩 Login Section -->
+    <main class="authentication-container d-flex justify-content-center align-items-center">
+        <div class="authentication-box shadow">
             <h2>Login To Your Account</h2>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required />
-
-                <label for="password">Password</label>
-                <div class="password-wrapper">
-                    <input type="password" id="password" placeholder="Enter your password" required />
-                    <span class="toggle-password" onclick="togglePassword('password', this)">
-                        <i class="fa-solid fa-eye"></i>
-                    </span>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
                 </div>
 
-                <label for="role">Role</label>
-                <select id="role" required>
-                    <option value="">Select Role</option>
-                    <option value="admin">Admin</option>
-                    <option value="manager">Marketing Manager</option>
-                    <option value="client">Client</option>
-                    <option value="influencer">Influencer</option>
-                </select>
+                <div class="mb-3">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password"
+                            required>
+                        <span class="toggle-password">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
 
-                <button type="submit">Login</button>
+                <div class="mb-3">
+                    <label for="role">Role</label>
+                    <select id="role" class="form-select" required>
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="manager">Marketing Manager</option>
+                        <option value="client">Client</option>
+                        <option value="influencer">Influencer</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn w-100" style="background-color:#256D6F; color:white;">Login</button>
+
                 <p class="form-message"></p>
-                <div class="links">
+
+                <div class="links mt-3">
                     <a href="Forget Password.html">Forgot Password?</a> |
                     <span>Don’t have an account?</span>
                     <a href="SignUp.html">Sign Up</a>
@@ -59,10 +68,10 @@
         </div>
     </main>
 
-
     <footer></footer>
     <script src="../scripts/load header & footer.js"></script>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/Login.js"></script>
 
 
 </body>

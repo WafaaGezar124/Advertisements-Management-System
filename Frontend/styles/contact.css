@@ -95,10 +95,24 @@ body {
 .contact-block a {
     color: #444;
     text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-block a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
 }
 
 .contact-block a:hover {
     color: #256D6F;
+}
+
+
+.contact-block i {
+    color: #256D6F;
+    font-size: 18px;
 }
 
 /* socials */
