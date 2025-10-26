@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up| Advertisements Management System</title>
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer_auth.css" />
+    <link rel="stylesheet" href="../styles/authentication.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+
+
+
+
+</head>
+
+<body>
+    <header></header>
+
+    <!--  Sign Up Section -->
+    <div class="authentication-container">
+        <div class="overlay"></div>
+
+        <div class="authentication-box">
+            <h2>Create Your Account</h2>
+            <form>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Enter your full name" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required />
+
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required />
+                    <span class="toggle-password" onclick="togglePassword('password', this)">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+
+                <label for="confirm-password">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+                    <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+
+                <label for="role">Role</label>
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="manager">Marketing Manager</option>
+                    <option value="client">Client</option>
+                    <option value="influencer">Influencer</option>
+                </select>
+
+                <button type="submit">Sign Up</button>
+                <p class="form-message"></p>
+
+                <div class="links">
+                    <span>Already have an account? <a href="login.html">Login </a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer></footer>
+    <!--Load Footer-->
+
+    <script src="../scripts/load header & footer.js"></script>
+    <script src="../scripts/main.js"></script>
+
+</body>
+
+</html>

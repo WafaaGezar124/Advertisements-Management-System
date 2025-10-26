@@ -1,0 +1,189 @@
+body {
+
+    background: url('../assets/images/loginPage.jpg') no-repeat center center/cover;
+
+}
+
+
+
+/* authentication Section  */
+.authentication-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 165px;
+}
+
+.overlay {
+
+
+    display: none;
+}
+
+.authentication-box {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.authentication-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #256D6F;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.authentication-box label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #444;
+    font-size: 14px;
+}
+
+.authentication-box input,
+.authentication-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.authentication-box input:focus,
+.authentication-box select:focus {
+    border-color: #256D6F;
+    box-shadow: 0 0 0 3px rgba(37, 109, 111, 0.1);
+    color: #256D6F;
+}
+
+
+.authentication-box input::placeholder {
+    color: #bbb;
+    opacity: 0.9;
+}
+
+.authentication-box select option {
+    color: #444;
+}
+
+.authentication-box button {
+    width: 100%;
+    padding: 12px;
+    background: #256D6F;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.authentication-box button:hover {
+    background: #256D6F;
+}
+
+.links {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    margin: 0 6px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links span {
+    color: #444;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.links a:last-child {
+    color: #256D6F;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:last-child:hover {
+    text-decoration: underline;
+    color: #256D6F;
+}
+
+/* ========================= */
+/*   FORM MESSAGE STYLING    */
+/* ========================= */
+.form-message {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    /* مخفي افتراضيًا */
+}
+
+.form-message.error {
+    display: block;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #d33;
+    border: 1px solid #d33;
+}
+
+.form-message.success {
+    display: block;
+    background-color: rgba(37, 109, 111, 0.1);
+    color: #256D6F;
+    border: 1px solid #256D6F;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+    /* مساحة للأيقونة */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    color: #256D6F;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
