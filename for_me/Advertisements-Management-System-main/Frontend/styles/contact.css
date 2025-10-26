@@ -1,0 +1,265 @@
+/* base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #444;
+    background: #f7f9f9;
+}
+
+/* background */
+.contact-hero {
+    height: 38vh;
+    min-height: 260px;
+    background-image: url('../assets/images/contactUs.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(37, 109, 111, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-content h1 {
+    color: #eee;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.hero-content p {
+    color: #eee;
+    font-size: 16px;
+}
+
+/* ===== main card ===== */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 80px;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 1140px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    overflow: hidden;
+}
+
+/* left info column */
+.card-left {
+    padding: 40px;
+    background: linear-gradient(180deg, #f7fbfb 0%, #eef7f7 100%);
+}
+
+.card-left h2 {
+    font-size: 22px;
+    color: #256D6F;
+    margin-bottom: 8px;
+}
+
+.muted {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* info blocks */
+.contact-block {
+    margin-bottom: 18px;
+}
+
+.contact-block h3 {
+    font-size: 14px;
+    color: #256D6F;
+    margin-bottom: 6px;
+}
+
+.contact-block p,
+.contact-block a {
+    color: #444;
+    text-decoration: none;
+}
+
+.contact-block a:hover {
+    color: #256D6F;
+}
+
+/* socials */
+.socials {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.socials .s {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #eef7f7;
+    color: #256D6F;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.socials .s:hover {
+    background: #256D6F;
+    color: #eee;
+}
+
+/* right form column */
+.card-right {
+    padding: 28px 36px;
+    background: #fff;
+}
+
+.card-right h2 {
+    font-size: 20px;
+    color: #256D6F;
+    margin-bottom: 12px;
+}
+
+/* form layout */
+.contact-form .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+    margin-bottom: 12px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd8d8;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #256D6F;
+    background: #fff;
+}
+
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #bbb;
+    opacity: 1;
+
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #256D6F;
+    box-shadow: 0 0 4px rgba(37, 109, 111, 0.3);
+}
+
+.field.full {
+    grid-column: 1 / -1;
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* buttons */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #256D6F;
+    color: #eee;
+}
+
+.btn.primary:hover {
+    opacity: 0.85;
+}
+
+.btn.outline {
+    background: transparent;
+    color: #256D6F;
+    border: 1px solid #256D6F;
+}
+
+.btn.outline:hover {
+    background: #256D6F;
+    color: #eee;
+}
+
+/* responsiveness */
+@media (max-width: 900px) {
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero {
+        height: 28vh;
+    }
+
+    .contact-form .row {
+        grid-template-columns: 1fr;
+    }
+
+    .card-left,
+    .card-right {
+        padding: 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+}
+
+/* small screens */
+@media (max-width: 480px) {
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .card-left h2,
+    .card-right h2 {
+        font-size: 18px;
+    }
+
+    .contact-main {
+        padding: 20px 12px 60px;
+    }
+}

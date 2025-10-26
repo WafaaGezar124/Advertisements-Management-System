@@ -1,0 +1,35 @@
+header nav {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: #666;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+
+header ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    color: #256D6F;
+}
