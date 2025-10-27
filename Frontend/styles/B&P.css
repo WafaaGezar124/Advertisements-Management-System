@@ -1,0 +1,439 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* كل النصوص bold */
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #1e293b;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+header h2 {
+  font-size: 22px;
+  color: #334155;
+}
+
+.search-bar {
+  flex: 1;
+ margin-left: 25px;
+}
+
+.search-bar input {
+  width: 50%;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #254d64;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* ===== STATS SECTION ===== */
+.stats {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  padding: 25px;
+  border-radius: 16px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.stat-box h3 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.stat-box .value {
+  font-size: 26px;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.green { color: #16a34a; }
+.red { color: #ef4444; }
+
+/* ===== MAIN GRID ===== */
+.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 35px; /* بعد الجداول عن بعض أكتر */
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  margin-bottom: 30px; /* مسافة بين الكروت */
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size: 17px;
+  color: #1e293b;
+  margin-bottom: 18px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+th {
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.paid { background: #dcfce7; color: #16a34a; }
+.pending { background: #fef9c3; color: #ca8a04; }
+.overdue { background: #fee2e2; color: #ef4444; }
+.completed { background: #dcfce7; color: #16a34a; }
+.failed { background: #fee2e2; color: #ef4444; }
+
+.green-text { color: #16a34a; }
+
+/* ===== REPORT SECTION ===== */
+/* ===== REPORT SECTION ===== */
+.report {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: scale(0.9); /* تصغير أكتر شوية */
+  transform-origin: top right;
+  padding: 18px 20px; /* تصغير الـ padding */
+  max-height: 520px; /* تقصير الارتفاع */
+  overflow-y: auto; /* لو البيانات زادت يحصل scroll */
+}
+
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #334155;
+  margin-top: 10px;
+}
+
+.bar {
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #114e50, #288285);
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .report {
+    transform: scale(1);
+  }
+}
+/* ===== GRAY TEXTS FOR SPECIFIC COLUMNS ===== */
+
+/* Invoices: Client + Date */
+.invoice-table td:nth-child(2),
+.invoice-table td:nth-child(4) {
+  color: #6b7280;
+  font-weight: 600;
+
+}
+
+/* Client Payments: Date */
+.client-table td:nth-child(3) {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Influencer Payments: Campaign */
+.influencer td:nth-child(2) {
+  color: #6b7280;
+  font-weight: 600;
+}
+/* ===== Subtext under titles ===== */
+.subtext {
+  color: #6b7280; /* رمادي خفيف */
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+/* ===== ICONS IN HEADERS ===== */
+.card h3 i {
+  color: #114e50; /* لون بنفسجي جميل زي فيجما */
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+/* ===== HEADER WITH BUTTON ===== */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* ===== BUTTON STYLE ===== */
+.action-btn {
+  background-color: #114e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #288285;
+  transform: translateY(-1px);
+}
+
+.subtext {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+/* ===== POPUP STYLES ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 14px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.popup input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.popup input:focus {
+  border-color: #114e50;
+  box-shadow: 0 0 0 2px rgba(107, 70, 255, 0.2);
+}
+
+.save-btn {
+  background: #114e50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.save-btn:hover {
+  background:#288285 ;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  margin-top: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.popup select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  color: #334155;
+}
+
+.popup select:focus {
+  border-color:#114e50;
+  box-shadow: 0 0 0 2px rgba(107, 70, 255, 0.2);
+}
+.green-text {
+  color: green;
+}
+.red-text {
+  color: red;
+}
+/* الخلفية العامة */
+.main-content {
+  transition: filter 0.1s ease;
+}
+
+/* لما البوب أب يفتح نخلي الخلفية blur */
+.blur-bg {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* البوب أب */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  width: 350px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.popup-overlay.hidden {
+  display: none;
+}
+
+.popup {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  width: 350px;
+  animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
