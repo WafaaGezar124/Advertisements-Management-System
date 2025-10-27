@@ -16,7 +16,7 @@ fetch(`${pathPrefixFooter}components/footer.html`)
             // تحديد نوع CSS المناسب للفوتر
             let cssFile = `${pathPrefixFooter}styles/footer.css`;
 
-            if (page.includes("login") || page.includes("signup") || page.includes("forget") || page.includes("reset")) {
+            if (page.includes("login") || page.includes("signup") || page.includes("forget") || page.includes("reset") || page.includes("dashboard")) {
                 cssFile = `${pathPrefixFooter}styles/footer_auth.css`;
             }
 
