@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\bootstrap-5.3.8-dist\css\bootstrap.min.css">
-    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Advertisements-Management-System-main\Frontend\styles\global.css">
-    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Advertisements-Management-System-main\Frontend\styles\header.css">
-    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\style.css">
-    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Advertisements-Management-System-main\Frontend\styles\footer.css">
+    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Frontend\styles\global.css">
+    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Frontend\styles\header.css">
+    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\style_dashboard.css">
+    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Frontend\styles\footer.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard Page</title>
 </head>
 <body>
 <!-- Navbar في الأعلى -->
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style="background-color:  hsl(182, 50%, 29%) !important;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">ZERO BUG</a>
+        <a class="navbar-brand" href="#">AdManage</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
             aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="#">INFLUENCERS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CLIENT</a>
+                    <a class="nav-link" href="D:\DepiProject\for_me\dashboard_page\client.html">CLIENT</a>
                 </li>
             </ul>
             <div class="user-menu d-flex align-items-center">
@@ -55,10 +55,10 @@
     <!-- Sidebar على اليسار -->
     <aside class="sidebar">
         <ul>
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Dashboard</a></li>
             <li><a href="#">Campaigns</a></li>
             <li><a href="#">Influencers</a></li>
-            <li><a href="#">Clients</a></li>
+            <li><a href="D:\DepiProject\for_me\dashboard_page\client.html">Clients</a></li>
             <li><a href="#">Reports</a></li>
             <li><a href="#">Post Scheduling</a></li>
             <li><a href="#">Payments</a></li>
@@ -302,9 +302,8 @@
                         }
                     }
                 });
-
+            
     </script>
-    <link rel="stylesheet" href="D:\DepiProject\for_me\dashboard_page\Advertisements-Management-System-main\Frontend\scripts\load header & footer.js">
 
 </body>
 </html>

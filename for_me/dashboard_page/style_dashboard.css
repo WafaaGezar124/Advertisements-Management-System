@@ -35,7 +35,7 @@ body {
 /* Sidebar على اليسار */
 .sidebar {
     width: 250px;
-    background-color: #212529;
+    background-color:hsl(182, 50%, 29%);
     color: white;
     padding: 30px 20px;
     position: sticky;
@@ -216,7 +216,7 @@ body {
 }
 /* Footer */
 .footer {
-    background-color: #222;
+    background-color: hsl(182, 50%, 29%);
     /* نفس لون السايدبار والناڤبار */
     color: white;
     text-align: center;
@@ -259,4 +259,11 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.sidebar ul li a.active{
+background-color: rgba(255, 255, 255, 0.25);
+    /* خلفية شفافة */
+    color: #fff;
+    font-weight: bold;
+    border:   rgba(255, 255, 255, 0.3);
 }
