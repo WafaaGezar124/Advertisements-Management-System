@@ -1,64 +1,15 @@
+/* ===== BODY ===== */
 body {
-
     color: #eee;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
+/* ===== Dashboard Container ===== */
 .dashboard-container {
     display: flex;
     height: 100%;
-}
-
-/* ===== Sidebar ===== */
-.sidebar {
-    width: 240px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.sidebar .logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #256D6F;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.sidebar nav a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ddd;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: 0.3s;
-    margin-bottom: 8px;
-}
-
-.sidebar nav a:hover,
-.sidebar nav a.active {
-    background: #256D6F;
-    color: #fff;
-}
-
-.sidebar .logout a {
-    color: #aaa;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.sidebar .logout a:hover {
-    color: #fff;
 }
 
 /* ===== Main Content ===== */
@@ -80,7 +31,9 @@ body {
     color: #256D6F;
 }
 
-.btn-add {
+/* ===== Buttons ===== */
+.btn-add,
+#savePostBtn {
     background: #256D6F;
     color: white;
     border: none;
@@ -89,7 +42,8 @@ body {
     transition: 0.3s;
 }
 
-.btn-add:hover {
+.btn-add:hover,
+#savePostBtn:hover {
     background: #1d5a5c;
 }
 
@@ -99,4 +53,34 @@ body {
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== FullCalendar Text Colors ===== */
+
+/* الأيام في الشبكة */
+.fc-daygrid-day-number {
+    color: #256D6F !important;
+    /* يخلي أرقام الأيام بيضا */
+}
+
+/* نص الأحداث */
+.fc-event-title {
+    color: #256D6F !important;
+    /* يخلي عنوان الحدث واضح */
+}
+
+/* الساعات في عرض الأسبوع أو اليوم */
+.fc-timegrid-slot-label {
+    color: #256D6F !important;
+    /* يخلي نص الساعات باين */
+}
+
+/* عناوين الأيام (Mon, Tue, ...الخ) */
+.fc-col-header-cell-cushion {
+    color: #256D6F !important;
+}
+
+/* عنوان الشهر في الأعلى */
+.fc-toolbar-title {
+    color: #256D6F !important;
 }

@@ -190,3 +190,4 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event && confirm("🗑️ Delete this post?")) event.remove();
     });
 });
+
