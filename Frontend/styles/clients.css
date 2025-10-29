@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ed;
+    overflow: hidden;
+    /* مهم علشان مايحصلش scroll للصفحة كلها */
+}
+
+/* ✅ Navbar ثابت بالأعلى */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #256D6F;
+    height: 56px;
+}
+
+/* ✅ Sidebar ثابت على اليسار */
+.sidebar {
+    position: fixed;
+    top: 56px;
+    /* يبدأ تحت الـ navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 56px);
+    background-color: #256D6F;
+    color: white;
+    padding: 30px 20px;
+    overflow-y: auto;
+    /* علشان لو المحتوى زاد */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 25px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 56px); /* نفس ارتفاع الجزء أسفل الـ navbar */
+}
+
+.sidebar {
+    flex: 0 0 250px; /* عرض ثابت */
+}
+
+.main {
+    flex: 1; /* ياخد كل المساحة الباقية */
+    padding: 20px 30px;
+    background-color: #f5f3ed;
+    overflow-y: auto;
+}
+
+
+/* ✅ تهيئة للـ Navbar وأزرارها */
+.custom-navbar {
+    background-color: #256D6F !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #d1f3f3 !important;
+}
+
+.custom-navbar .btn {
+    background-color: #ffffff;
+    color: #256D6F;
+    border: none;
+}
+
+.custom-navbar .btn:hover {
+    background-color: #d1f3f3;
+    color: #1f5a5c;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* ✅ موبايل responsive */
+@media (max-width: 992px) {
+    body {
+        overflow: auto;
+        /* نرجع التمرير في الموبايل */
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+    }
+
+    .main {
+        margin-left: 0;
+        margin-top: 56px;
+        height: auto;
+        overflow-y: visible;
+    }
+}
+/* ✅ العنصر النشط (Clients مثلاً) في الـ sidebar */
+.sidebar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* شفاف */
+    color: #ffffff;
+    /* نص أبيض واضح */
+    font-weight: 600;
+    /* خط أوضح */
+}
+
+/* عند المرور عليه */
+.sidebar a.active:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+    /* نفس المسافة الأصلية علشان ما يتحركش */
+}
+.btn.btn-primary{
+    background-color:#256D6F ;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* مسافة بسيطة بين الزر ومربع البحث */
+}
+
+.search-bar input {
+    width: 250px;
+    /* حجم مناسب */
+}
+
+/* ✅ Sidebar ثابتة على الشمال */
+.sidebar {
+    position: fixed;
+    top: 56px; /* تحت الـ navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 56px);
+    background-color: #256D6F;
+    color: white;
+    padding: 30px 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+/* ✅ المحتوى الرئيسي */
+.main {
+    margin-left: 250px; /* يبدأ بعد الـ sidebar */
+    margin-top: 56px; /* يبدأ بعد الـ navbar */
+    padding: 20px 30px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    background-color: #f5f3ed;
+    width: calc(100% - 250px); /* ياخد باقي الشاشة */
+    box-sizing: border-box;
+}
+
+/* ✅ الـ top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* ✅ البحث والزر جنب بعض */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 250px;
+}
+
+/* ✅ العنصر النشط في الـ sidebar */
+.sidebar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 600;
+}
+.sidebar a.active:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 🎨 تخصيص لون خلفية الهيدر في الجدول */
+.table-header {
+    background-color:#1f5a5c !important;
+    color: #ffffff !important;
+    
+}
+
+.table-header th {
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 15px;
+}
+/* شكل الصف الجديد */
+.client-table td[contenteditable="true"] {
+    background-color: #fffbe6;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* شكل الأيقونات */
+.actions i {
+    cursor: pointer;
+    margin-right: 8px;
+    transition: color 0.2s;
+}
+
+.actions i:hover {
+    color: #256D6F;
+}
+
+.save-icon {
+    color: #0d6efd;
+}
+
+.delete-icon {
+    color: #dc3545;
+}
+
+.active-client {
+    color: #16a34a;
+}
+
+.completed-client {
+    color: #9ca3af;
+}
+
+.pending-client {
+    color: yellow;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: px;
+}
+
+.actions i {
+    font-size: 16px;
+    cursor: pointer;
+    color: #475569;
+    transition: color 0.2s;
+}
+
+.actions i:hover {
+    color: #2563eb;
+}
+

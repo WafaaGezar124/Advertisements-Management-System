@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a2b4f5a6b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/clients.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/footer_auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Clients</title>
+</head>
+<body>
+    <!-- Navbar في الأعلى -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AdManage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="C:\Users\SoftLaptop\Advertisements-Management-System\Frontend\pages\dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CAMPAIGNS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INFLUENCERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">CLIENT
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="user-menu d-flex align-items-center">
+                    <img src="https://www.svgrepo.com/show/362184/user-male.svg" alt="User" class="user-avatar" height="25"
+                        width="25">
+                </div>
+                <form class="d-flex">
+                    <input id="search_nav" class="form-control me-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+        <!-- Container الرئيسي -->
+        <div class="page-container">
+            <!-- Sidebar على اليسار -->
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">Influencers</a></li>
+                    <li><a href="#" class="active">Clients</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Post Scheduling</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </aside>
+            <div class="main">
+                <!-- Top bar -->
+                <div class="top-bar">
+                    <h1>Clients Management</h1>
+                    <div class="search-bar">
+                        <input class="form-control me-sm-2" type="search" placeholder="Search Client...">
+                        <button type="button" class="btn btn-primary" id="addClientBtn">ADD CLIENT</button>
+                    </div>
+                </div>
+
+                <div class="client-table">
+                <table class="table table-hover">
+                    <thead class="table-header">
+                        <tr>
+                            <th scope="col">Client Name</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Campaigns</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-success">
+                            <th scope="row">Ahmed</th>
+                            <td>summer Ads</td>
+                            <td>ali@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="active-client">Active</span></td>
+                            <td>2</td>
+                            <td class="actions" >
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Lina</th>
+                            <td>Instagram Launch</td>
+                            <td>lina@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="completed-client">Completed</span></td>
+                            <td>4</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Jessica Williams</th>
+                            <td>Delta Inc</td>
+                            <td>jessica@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="active-client">Active</span></td>
+                            <td>3</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Ali</th>
+                            <td>Acme Corp</td>
+                            <td>ali@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="pending-client">Pending</span></td>
+                            <td>1</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Omar</th>
+                            <td>Facebook Boost</td>
+                            <td>omar@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="active-client">Active</span></td>
+                            <td>6</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Michael</th>
+                            <td>Gamma Co</td>
+                            <td>michael@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="pending-client">Pending</span></td>
+                            <td>6</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Mohamed</th>
+                            <td>Acme Corp</td>
+                            <td>mohamed@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="pending-client">Pending</span></td>
+                            <td>2</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Smith</th>
+                            <td>INC</td>
+                            <td>smith@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="completed-client">Completed</span></td>
+                            <td>9</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Sarah</th>
+                            <td>Beta LLC</td>
+                            <td>sarah@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="active-client">Active</span></td>
+                            <td>4</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                        <tr class="table-success">
+                            <th scope="row">Johnson</th>
+                            <td>BTS</td>
+                            <td>johnson@example.com</td>
+                            <td>(555)123-4</td>
+                            <td><span class="completed-client">Completed</span></td>
+                            <td>7</td>
+                            <td class="actions">
+                                <i class="fas fa-pen edit-btn"></i>
+                                <i class="fas fa-trash delete-btn"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div>
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">&laquo;</a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">4</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">5</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">&raquo;</a>
+                        </li>
+                    </ul>
+                </div>
+<footer><p>&copy; 2025 AdManage. All rights reserved.</p></footer>
+<script src="C:\Users\SoftLaptop\Advertisements-Management-System\Frontend\scripts\load footer.js"></script>
+<script src="../scripts/client.js"></script>
+<script src="https://kit.fontawesome.com/a2b4f5a6b4.js" crossorigin="anonymous"></script>
+</body>
+</html>
