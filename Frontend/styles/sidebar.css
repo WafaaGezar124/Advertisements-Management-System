@@ -2,8 +2,10 @@
 /* 🌟 SIDEBAR STYLING             */
 /* =============================== */
 .sidebar {
-    background-color: #256D6F;
-    color: white;
+    background-color: #256D6F !important;
+    /* خلفية داكنة ثابتة */
+    color: #fff !important;
+    /* كل النصوص باللون الأبيض */
     width: 240px;
     height: 100vh;
     position: fixed;
@@ -13,6 +15,8 @@
     padding: 20px;
     transition: transform 0.3s ease;
     z-index: 900;
+    overflow-y: auto;
+    /* لو القائمة طويلة */
 }
 
 /* لما السايدبار يتقفل */
@@ -20,7 +24,7 @@
     transform: translateX(-100%);
 }
 
-/* ===== عناصر القائمة ===== */
+/* عناصر القائمة */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -32,7 +36,8 @@
 }
 
 .sidebar ul li a {
-    color: white;
+    color: #fff !important;
+    /* نص أبيض */
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -40,25 +45,32 @@
     padding: 10px;
     border-radius: 6px;
     transition: all 0.3s ease;
+    background-color: transparent;
+    /* إزالة أي خلفية افتراضية */
 }
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.2);
+    /* تأثير هور واضح */
+    color: #fff !important;
+}
+
+/* Sidebar headings */
+.sidebar h2,
+.sidebar h3 {
+    color: #fff !important;
+    margin-bottom: 15px;
 }
 
 /* =============================== */
 /* 🌟 MAIN CONTENT ADJUSTMENT     */
 /* =============================== */
-
-/* الوضع الطبيعي */
 .main-content {
     transition: margin-left 0.3s ease;
     margin-left: 240px;
 }
 
-/* لما السايدبار يتقفل */
 .main-content.expanded {
     margin-left: 0;
-
 }
