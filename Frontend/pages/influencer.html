@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Influencer Dashboard</title>
+<<<<<<< HEAD
   <link rel="stylesheet" href="../styles/influencer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,6 +20,18 @@
       <input type="text" placeholder="Search influencers...">
     </div>
 
+=======
+  <link rel="stylesheet" href="influencer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="top-bar">
+    
+    <div class="search-box">
+      <input type="text" placeholder="Search influencers...">
+    </div>
+ 
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
   </header>
 
   <main class="content">
@@ -47,36 +63,52 @@
       </thead>
       <tbody>
         <tr>
+<<<<<<< HEAD
           <td>
             <div class="user"><span class="avatar">SJ</span> Sarah Johnson</div>
           </td>
+=======
+          <td><div class="user"><span class="avatar">SJ</span> Sarah Johnson</div></td>
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
           <td>Fashion</td>
           <td>$5000</td>
           <td><span class="status active">Active</span></td>
           <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
+<<<<<<< HEAD
           <td>
             <div class="user"><span class="avatar">MC</span> Mike Chen</div>
           </td>
+=======
+          <td><div class="user"><span class="avatar">MC</span> Mike Chen</div></td>
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
           <td>Tech</td>
           <td>$3500</td>
           <td><span class="status active">Active</span></td>
           <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
+<<<<<<< HEAD
           <td>
             <div class="user"><span class="avatar">ED</span> Emma Davis</div>
           </td>
+=======
+          <td><div class="user"><span class="avatar">ED</span> Emma Davis</div></td>
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
           <td>Lifestyle</td>
           <td>$4200</td>
           <td><span class="status pending">Pending</span></td>
           <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
+<<<<<<< HEAD
           <td>
             <div class="user"><span class="avatar">AT</span> Alex Turner</div>
           </td>
+=======
+          <td><div class="user"><span class="avatar">AT</span> Alex Turner</div></td>
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
           <td>Gaming</td>
           <td>$6000</td>
           <td><span class="status completed">Completed</span></td>
@@ -85,6 +117,7 @@
       </tbody>
     </table>
   </main>
+<<<<<<< HEAD
   <!-- ===== كارت التعديل (Popup) ===== -->
   <div id="editPopup" class="popup hidden">
     <div class="popup-content">
@@ -128,12 +161,31 @@
 
       <label>Status</label>
       <select id="addStatus">
+=======
+<!-- ===== كارت التعديل (Popup) ===== -->
+<div id="editPopup" class="popup hidden">
+  <div class="popup-content">
+    <h3>Edit Influencer</h3>
+    <form id="editForm">
+      <label>Name:</label>
+      <input type="text" id="editName" required>
+
+      <label>Category:</label>
+      <input type="text" id="editCategory" required>
+
+      <label>Pricing ($):</label>
+      <input type="number" id="editPricing" required>
+
+      <label>Status:</label>
+      <select id="editStatus">
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13
         <option value="Active">Active</option>
         <option value="Pending">Pending</option>
         <option value="Completed">Completed</option>
       </select>
 
       <div class="popup-buttons">
+<<<<<<< HEAD
         <button class="save-btn" id="saveAddBtn">Save</button>
         <button class="cancel-btn" id="cancelAddBtn">Cancel</button>
       </div>
@@ -144,3 +196,41 @@
 </body>
 
 </html>
+=======
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" id="cancelEdit" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- Add Influencer Popup -->
+<div class="popup hidden" id="addPopup">
+  <div class="popup-content">
+    <h3>Add New Influencer</h3>
+    <label>Name</label>
+    <input type="text" id="addName" placeholder="Enter influencer name">
+
+    <label>Category</label>
+    <input type="text" id="addCategory" placeholder="Enter category">
+
+    <label>Pricing</label>
+    <input type="number" id="addPricing" placeholder="Enter pricing">
+
+    <label>Status</label>
+    <select id="addStatus">
+      <option value="Active">Active</option>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    <div class="popup-buttons">
+      <button class="save-btn" id="saveAddBtn">Save</button>
+      <button class="cancel-btn" id="cancelAddBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+  <script src="influencer.js"></script>
+</body>
+</html>
+>>>>>>> 702580a624f35d44f0f669d22c845e42e6f76c13

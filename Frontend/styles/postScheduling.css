@@ -1,5 +1,5 @@
 body {
-
+    background: url('../assets/images/loginPage.jpg') no-repeat center center/cover;
     color: #eee;
     height: 100vh;
     overflow: hidden;
