@@ -1,0 +1,102 @@
+body {
+
+    color: #eee;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100%;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: 240px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.sidebar .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #256D6F;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-bottom: 8px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #256D6F;
+    color: #fff;
+}
+
+.sidebar .logout a {
+    color: #aaa;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.sidebar .logout a:hover {
+    color: #fff;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    flex: 1;
+    padding: 30px 50px;
+    overflow-y: auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 24px;
+    color: #256D6F;
+}
+
+.btn-add {
+    background: #256D6F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: #1d5a5c;
+}
+
+/* ===== Calendar ===== */
+#calendar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
