@@ -278,3 +278,19 @@ body {
     background-color: #d1f3f3;
     color: #1f5a5c;
 }
+
+.sidebar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* شفاف */
+    color: #ffffff;
+    /* نص أبيض واضح */
+    font-weight: 600;
+    /* خط أوضح */
+}
+
+/* عند المرور عليه */
+.sidebar a.active:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-left: 15px;
+    /* نفس المسافة الأصلية علشان ما يتحركش */
+}

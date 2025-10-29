@@ -1,0 +1,82 @@
+/* =============================== */
+/* 🌟 NAVBAR STYLING              */
+/* =============================== */
+.navbar {
+    background-color: #256D6F;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Left Section (Logo + Menu Icon) ===== */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ===== Buttons (Menu & Search) ===== */
+.menu-btn,
+.search-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.menu-btn:hover,
+.search-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Search Box (Modern Style) ===== */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #444;
+    width: 150px;
+}
+
+.search-box .search-btn {
+    background: #256D6F;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-box .search-btn:hover {
+    background: #1f5a5c;
+}

@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="../styles/dashboard.css" />
 
+    <link rel="stylesheet" href="../styles/footer_auth.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard</title>
 </head>
@@ -37,7 +39,8 @@
                         <a class="nav-link" href="#">INFLUENCERS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CLIENT</a>
+                        <a class="nav-link"
+                            href="C:\Users\SoftLaptop\Advertisements-Management-System\Frontend\pages\clients.html">CLIENT</a>
                     </li>
                 </ul>
                 <div class="user-menu d-flex align-items-center">
@@ -58,10 +61,12 @@
         <!-- Sidebar على اليسار -->
         <aside class="sidebar">
             <ul>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="#" class="active">Dashboard</a></li>
                 <li><a href="#">Campaigns</a></li>
                 <li><a href="#">Influencers</a></li>
-                <li><a href="#">Clients</a></li>
+                <li><a
+                        href="C:\Users\SoftLaptop\Advertisements-Management-System\Frontend\pages\clients.html">Clients</a>
+                </li>
                 <li><a href="#">Reports</a></li>
                 <li><a href="#">Post Scheduling</a></li>
                 <li><a href="#">Payments</a></li>
@@ -197,116 +202,7 @@
     </footer>
     <script src="../scripts/load footer.js"></script>
 
-    <script>
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
-                datasets: [{
-                    label: 'Revenue',
-                    data: [3000, 4000, 3500, 5000, 6000],
-                    borderColor: 'blue',
-                    borderWidth: 2,
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: { beginAtZero: true }
-                }
-            }
-        });
-        // Engagement Rate Chart
-        const ctx02 = document.getElementById('engagementChart').getContext('2d');
-
-        new Chart(ctx02, {
-            type: 'doughnut',
-            data: {
-                labels: ['Likes', 'Comments', 'Shares', 'Views'],
-                datasets: [{
-                    label: 'Engagement Rate',
-                    data: [45, 25, 15, 15],
-                    backgroundColor: [
-                        '#0d6efd',
-                        '#198754',
-                        '#ffc107',
-                        '#dc3545'
-                    ],
-                    borderColor: '#fff',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            color: '#333',
-                            font: { size: 14 }
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: '#000',
-                        titleColor: '#fff',
-                        bodyColor: '#fff'
-                    }
-                },
-                cutout: '65%',
-            }
-        });
-        // Client Engagement (Monthly) Chart
-        const ctx03 = document.getElementById('clientEngagementChart').getContext('2d');
-
-        new Chart(ctx03, {
-            type: 'bar', // ممكن تغيّرها لـ 'line' لو عايز منحنى بدل أعمدة
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                datasets: [{
-                    label: 'Active Clients',
-                    data: [120, 150, 180, 200, 230, 250, 300, 320, 310, 350, 370, 400],
-                    backgroundColor: '#0d6efd',
-                    borderRadius: 8,
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Number of Clients',
-                            color: '#333',
-                            font: { size: 14, weight: 'bold' }
-                        },
-                        ticks: { color: '#333' }
-                    },
-                    x: {
-                        ticks: { color: '#333' }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: true,
-                        labels: {
-                            color: '#333',
-                            font: { size: 14 }
-                        }
-                    },
-                    tooltip: {
-                        backgroundColor: '#000',
-                        titleColor: '#fff',
-                        bodyColor: '#fff'
-                    }
-                }
-            }
-        });
-
-    </script>
+    <script src="../scripts/dashboard.js"></script>
 
 </body>
 

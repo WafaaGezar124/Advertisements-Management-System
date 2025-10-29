@@ -1,0 +1,166 @@
+/* ============================= */
+/* 🌟 MAIN CONTENT AREA STYLING  */
+/* ============================= */
+.main-content {
+    margin-left: 240px;
+    padding: 90px 30px;
+    flex: 1;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.topbar h1 {
+    color: #256D6F;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* 🔍 FILTERS SECTION            */
+/* ============================= */
+.filters {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filters select {
+    min-width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* ============================= */
+/* ➕ ADD BUTTON STYLING         */
+/* ============================= */
+.btn-add {
+    background-color: #256D6F;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #256D6F;
+}
+
+/* ============================= */
+/* 🗓️ CALENDAR STYLING          */
+/* ============================= */
+#calendar {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 600px;
+    /* مهم جدًا لظهور الكاليندر */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================= */
+/* ⚙️ CUSTOM CONTEXT MENU       */
+/* ============================= */
+.custom-context-menu {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 6px 0;
+    width: 150px;
+    display: none;
+    z-index: 9999;
+    overflow: hidden;
+    animation: fadeIn 0.15s ease-in-out;
+}
+
+/* كل زر داخل المنيو */
+.custom-context-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* عند المرور بالماوس */
+.custom-context-menu button:hover {
+    background: rgba(37, 109, 111, 0.1);
+    color: #256D6F;
+}
+
+/* لون مميز لزرار الحذف */
+#deletePostBtn:hover {
+    background: rgba(211, 51, 51, 0.1);
+    color: #d33;
+}
+
+/* ============================= */
+/* ✨ SIMPLE FADE-IN ANIMATION  */
+/* ============================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* زر Save Post في المودال (مخصص) */
+#savePostBtn {
+    background-color: #256D6F;
+    /* لون برتقالي شِيك */
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 18px rgba(230, 156, 36, 0.18);
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+#savePostBtn:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+}
+
+/* نسخة احتياطية لو تستخدمين btn-primary بدل id */
+.modal .btn-primary,
+.btn-primary#savePostBtn {
+    background-color: #256D6F !important;
+    border: none !important;
+}
+
+.modal .btn-primary:hover,
+.btn-primary#savePostBtn:hover {
+    background-color: #256D6F !important;
+}
+
+/* تحسين شكل معاينة الميديا (اختياري، لو حابة) */
+#mediaPreview img.img-thumbnail {
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* لو السايدبار محتاج يكون فوق المحتوى عند الفتح */
+.page-container.collapsed .main-content {
+    margin-left: 80px;
+    /* مثال: تقلل المسافة لو السايدبار انقفل */
+}
+
+/* لعرض أي أيقونات زرار القفل */
+.sidebar-toggle {
+    cursor: pointer;
+    user-select: none;
+}

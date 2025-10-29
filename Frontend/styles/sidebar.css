@@ -1,0 +1,64 @@
+/* =============================== */
+/* 🌟 SIDEBAR STYLING             */
+/* =============================== */
+.sidebar {
+    background-color: #256D6F;
+    color: white;
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    /* تحت النافبار */
+    left: 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 900;
+}
+
+/* لما السايدبار يتقفل */
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+/* ===== عناصر القائمة ===== */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =============================== */
+/* 🌟 MAIN CONTENT ADJUSTMENT     */
+/* =============================== */
+
+/* الوضع الطبيعي */
+.main-content {
+    transition: margin-left 0.3s ease;
+    margin-left: 240px;
+}
+
+/* لما السايدبار يتقفل */
+.main-content.expanded {
+    margin-left: 0;
+
+}
