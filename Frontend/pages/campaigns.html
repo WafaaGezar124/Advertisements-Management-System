@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrouk_Campaigns</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style_modified.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-bullhorn text-primary me-2"></i>
+                <strong>Campaigns </strong>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Admin User
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-edit me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="settings-user-roles.html"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-white sidebar">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home me-2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clients.html">
+                                <i class="fas fa-users me-2"></i> Clients
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="campaigns.html">
+                                <i class="fas fa-bullhorn me-2"></i> Campaigns
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="analytics-reports.html">
+                                <i class="fas fa-chart-line me-2"></i> Analytics & Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings-user-roles.html">
+                                <i class="fas fa-cog me-2"></i> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2"><i class="fas fa-bullhorn me-2"></i>Campaign Management</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createCampaignModal">
+                            <i class="fas fa-plus me-2"></i>Create Campaign
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campaign Statistics -->
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Total Campaigns</h6>
+                                <h3 class="mb-0 fw-bold">156</h3>
+                                <small class="text-success"><i class="fas fa-arrow-up"></i> 15% increase</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Active Campaigns</h6>
+                                <h3 class="mb-0 fw-bold">89</h3>
+                                <small class="text-success"><i class="fas fa-play-circle"></i> 57% active</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Scheduled</h6>
+                                <h3 class="mb-0 fw-bold">23</h3>
+                                <small class="text-info"><i class="fas fa-clock"></i> Upcoming</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h6 class="text-muted mb-2">Completed</h6>
+                                <h3 class="mb-0 fw-bold">44</h3>
+                                <small class="text-secondary"><i class="fas fa-check-circle"></i> Success</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign Filter Tabs -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="campaignTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">
+                                    All Campaigns
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="active-tab" data-bs-toggle="pill" data-bs-target="#active" type="button" role="tab">
+                                    <i class="fas fa-play-circle me-1"></i>Active
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="scheduled-tab" data-bs-toggle="pill" data-bs-target="#scheduled" type="button" role="tab">
+                                    <i class="fas fa-clock me-1"></i>Scheduled
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="paused-tab" data-bs-toggle="pill" data-bs-target="#paused" type="button" role="tab">
+                                    <i class="fas fa-pause-circle me-1"></i>Paused
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="completed-tab" data-bs-toggle="pill" data-bs-target="#completed" type="button" role="tab">
+                                    <i class="fas fa-check-circle me-1"></i>Completed
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Search and Filters -->
+                        <div class="row g-3">
+                            <div class="col-md-5">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-start-0" id="searchCampaigns" placeholder="Search campaigns...">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <select class="form-select" id="filterClient">
+                                    <option value="">All Clients</option>
+                                    <option value="techcorp">TechCorp Inc.</option>
+                                    <option value="fashion">Fashion Boutique</option>
+                                    <option value="retail">Global Retail Co.</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <select class="form-select" id="filterPlatform">
+                                    <option value="">All Platforms</option>
+                                    <option value="google">Google Ads</option>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="linkedin">LinkedIn</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-secondary w-100">
+                                    <i class="fas fa-filter me-2"></i>More Filters
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign Cards -->
+                <div class="tab-content" id="campaignTabContent">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel">
+                        <div class="row">
+                            <!-- Campaign Card 1 -->
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">Active</span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-pause me-2"></i>Pause</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold mb-2">Summer Sale 2024</h5>
+                                        <p class="text-muted small mb-3">
+                                            <i class="fas fa-building me-1"></i>TechCorp Inc.
+                                        </p>
+                                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                <i class="fab fa-google me-1"></i>Google Ads
+                                            </span>
+                                            <span class="badge bg-info bg-opacity-10 text-info">
+                                                <i class="fab fa-facebook me-1"></i>Facebook
+                                            </span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <small class="text-muted">Budget Progress</small>
+                                                <small class="fw-semibold">$8,500 / $10,000</small>
+                                            </div>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Impressions</small>
+                                                    <strong>245K</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">ROI</small>
+                                                    <strong class="text-success">425%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted small">
+                                            <span><i class="fas fa-calendar me-1"></i>May 1 - Jun 30</span>
+                                            <span><i class="fas fa-clock me-1"></i>45 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white border-0">
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-line me-2"></i>View Analytics
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campaign Card 2 -->
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">Active</span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-pause me-2"></i>Pause</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold mb-2">Q4 Product Launch</h5>
+                                        <p class="text-muted small mb-3">
+                                            <i class="fas fa-building me-1"></i>Fashion Boutique LLC
+                                        </p>
+                                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                                            <span class="badge bg-danger bg-opacity-10 text-danger">
+                                                <i class="fab fa-instagram me-1"></i>Instagram
+                                            </span>
+                                            <span class="badge bg-info bg-opacity-10 text-info">
+                                                <i class="fab fa-facebook me-1"></i>Facebook
+                                            </span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <small class="text-muted">Budget Progress</small>
+                                                <small class="fw-semibold">$12,400 / $15,000</small>
+                                            </div>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 83%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Impressions</small>
+                                                    <strong>189K</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">ROI</small>
+                                                    <strong class="text-success">387%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted small">
+                                            <span><i class="fas fa-calendar me-1"></i>Apr 15 - Jul 15</span>
+                                            <span><i class="fas fa-clock me-1"></i>60 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white border-0">
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-line me-2"></i>View Analytics
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campaign Card 3 -->
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-warning text-dark">Paused</span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-play me-2"></i>Resume</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold mb-2">Brand Awareness</h5>
+                                        <p class="text-muted small mb-3">
+                                            <i class="fas fa-building me-1"></i>Global Retail Co.
+                                        </p>
+                                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                <i class="fab fa-linkedin me-1"></i>LinkedIn
+                                            </span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <small class="text-muted">Budget Progress</small>
+                                                <small class="fw-semibold">$3,200 / $8,000</small>
+                                            </div>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-info" role="progressbar" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Impressions</small>
+                                                    <strong>78K</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">ROI</small>
+                                                    <strong class="text-info">245%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted small">
+                                            <span><i class="fas fa-calendar me-1"></i>Mar 1 - Aug 31</span>
+                                            <span><i class="fas fa-pause-circle me-1"></i>Paused</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white border-0">
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-line me-2"></i>View Analytics
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campaign Card 4 -->
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-primary">Scheduled</span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-times me-2"></i>Cancel</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold mb-2">New Year Campaign</h5>
+                                        <p class="text-muted small mb-3">
+                                            <i class="fas fa-building me-1"></i>E-commerce Store
+                                        </p>
+                                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                <i class="fab fa-google me-1"></i>Google Ads
+                                            </span>
+                                            <span class="badge bg-danger bg-opacity-10 text-danger">
+                                                <i class="fab fa-instagram me-1"></i>Instagram
+                                            </span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <small class="text-muted">Budget Allocation</small>
+                                                <small class="fw-semibold">$20,000</small>
+                                            </div>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Start Date</small>
+                                                    <strong>Dec 15</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Duration</small>
+                                                    <strong>45 days</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted small">
+                                            <span><i class="fas fa-calendar me-1"></i>Dec 15 - Jan 30</span>
+                                            <span><i class="fas fa-clock me-1"></i>Not started</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white border-0">
+                                        <a href="#" class="btn btn-outline-secondary btn-sm w-100">
+                                            <i class="fas fa-edit me-2"></i>Edit Campaign
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campaign Card 5 -->
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-success">Active</span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-pause me-2"></i>Pause</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold mb-2">Holiday Special</h5>
+                                        <p class="text-muted small mb-3">
+                                            <i class="fas fa-building me-1"></i>Food & Beverage Ltd.
+                                        </p>
+                                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                                            <span class="badge bg-info bg-opacity-10 text-info">
+                                                <i class="fab fa-facebook me-1"></i>Facebook
+                                            </span>
+                                            <span class="badge bg-danger bg-opacity-10 text-danger">
+                                                <i class="fab fa-instagram me-1"></i>Instagram
+                                            </span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <small class="text-muted">Budget Progress</small>
+                                                <small class="fw-semibold">$4,800 / $12,000</small>
+                                            </div>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Impressions</small>
+                                                    <strong>156K</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">ROI</small>
+                                                    <strong class="text-success">298%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted small">
+                                            <span><i class="fas fa-calendar me-1"></i>May 10 - Aug 10</span>
+                                            <span><i class="fas fa-clock me-1"></i>52 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white border-0">
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">
+                                            <i class="fas fa-chart-line me-2"></i>View Analytics
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campaign Card 6 -->
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                                        <span class="badge bg-secondary">Completed</span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View Details</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="fas fa-file-export me-2"></i>Export Report</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold mb-2">Winter Collection</h5>
+                                        <p class="text-muted small mb-3">
+                                            <i class="fas fa-building me-1"></i>Fashion Boutique LLC
+                                        </p>
+                                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary">
+                                                <i class="fab fa-google me-1"></i>Google Ads
+                                            </span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div class="d-flex justify-content-between mb-1">
+                                                <small class="text-muted">Budget Used</small>
+                                                <small class="fw-semibold">$9,800 / $10,000</small>
+                                            </div>
+                                            <div class="progress" style="height: 6px;">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 98%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">Impressions</small>
+                                                    <strong>312K</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="text-center p-2 bg-light rounded">
+                                                    <small class="text-muted d-block">ROI</small>
+                                                    <strong class="text-success">342%</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between text-muted small">
+                                            <span><i class="fas fa-calendar me-1"></i>Jan 1 - Mar 31</span>
+                                            <span><i class="fas fa-check-circle me-1"></i>Completed</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-white border-0">
+                                        <a href="#" class="btn btn-outline-secondary btn-sm w-100">
+                                            <i class="fas fa-file-export me-2"></i>View Report
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Create Campaign Modal -->
+    <div class="modal fade" id="createCampaignModal" tabindex="-1" aria-labelledby="createCampaignModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createCampaignModalLabel">
+                        <i class="fas fa-bullhorn me-2"></i>Create New Campaign
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createCampaignForm">
+                        <div class="row g-3">
+                            <!-- Campaign Basic Info -->
+                            <div class="col-12">
+                                <h6 class="fw-semibold mb-3">Campaign Information</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="campaignName" class="form-label">Campaign Name *</label>
+                                <input type="text" class="form-control" id="campaignName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="campaignClient" class="form-label">Client *</label>
+                                <select class="form-select" id="campaignClient" required>
+                                    <option value="">Select Client</option>
+                                    <option value="techcorp">TechCorp Inc.</option>
+                                    <option value="fashion">Fashion Boutique LLC</option>
+                                    <option value="retail">Global Retail Co.</option>
+                                    <option value="health">HealthPlus Medical</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="campaignObjective" class="form-label">Campaign Objective *</label>
+                                <select class="form-select" id="campaignObjective" required>
+                                    <option value="">Select Objective</option>
+                                    <option value="awareness">Brand Awareness</option>
+                                    <option value="traffic">Website Traffic</option>
+                                    <option value="leads">Lead Generation</option>
+                                    <option value="sales">Sales Conversion</option>
+                                    <option value="engagement">Engagement</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="campaignDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="campaignDescription" rows="3"></textarea>
+                            </div>
+
+                            <!-- Budget & Timeline -->
+                            <div class="col-12 mt-4">
+                                <h6 class="fw-semibold mb-3">Budget & Timeline</h6>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="campaignBudget" class="form-label">Total Budget ($) *</label>
+                                <input type="number" class="form-control" id="campaignBudget" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="campaignStartDate" class="form-label">Start Date *</label>
+                                <input type="date" class="form-control" id="campaignStartDate" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="campaignEndDate" class="form-label">End Date *</label>
+                                <input type="date" class="form-control" id="campaignEndDate" required>
+                            </div>
+
+                            <!-- Platforms -->
+                            <div class="col-12 mt-4">
+                                <h6 class="fw-semibold mb-3">Advertising Platforms</h6>
+                            </div>
+                            <div class="col-12">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="platformGoogle">
+                                            <label class="form-check-label" for="platformGoogle">
+                                                <i class="fab fa-google me-1"></i>Google Ads
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="platformFacebook">
+                                            <label class="form-check-label" for="platformFacebook">
+                                                <i class="fab fa-facebook me-1"></i>Facebook
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="platformInstagram">
+                                            <label class="form-check-label" for="platformInstagram">
+                                                <i class="fab fa-instagram me-1"></i>Instagram
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="platformLinkedIn">
+                                            <label class="form-check-label" for="platformLinkedIn">
+                                                <i class="fab fa-linkedin me-1"></i>LinkedIn
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Target Audience -->
+                            <div class="col-12 mt-4">
+                                <h6 class="fw-semibold mb-3">Target Audience</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="targetLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="targetLocation" placeholder="e.g., United States, California">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="targetAgeRange" class="form-label">Age Range</label>
+                                <select class="form-select" id="targetAgeRange">
+                                    <option value="">All Ages</option>
+                                    <option value="18-24">18-24</option>
+                                    <option value="25-34">25-34</option>
+                                    <option value="35-44">35-44</option>
+                                    <option value="45-54">45-54</option>
+                                    <option value="55+">55+</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="targetInterests" class="form-label">Interests (comma-separated)</label>
+                                <input type="text" class="form-control" id="targetInterests" placeholder="e.g., Technology, Fashion, Sports">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="fas fa-save me-2"></i>Save as Draft
+                    </button>
+                    <button type="button" class="btn btn-primary" id="createCampaignBtn">
+                        <i class="fas fa-rocket me-2"></i>Launch Campaign
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/campaigns.js"></script>
+</body>
+</html>
