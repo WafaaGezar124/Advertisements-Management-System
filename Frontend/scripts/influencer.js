@@ -143,3 +143,13 @@ saveAddBtn.addEventListener("click", () => {
 
 
 renderTable(influencers);
+
+// ===== Sidebar Toggle =====
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+const mainWrapper = document.querySelector(".main-wrapper");
+
+menuToggle.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+  mainWrapper.classList.toggle("shifted");
+});

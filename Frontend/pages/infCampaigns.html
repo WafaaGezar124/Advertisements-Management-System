@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Influencer Dashboard</title>
-
-<link rel="stylesheet" href="influencer.css">
+  <title>Campaign Dashboard</title>
+  <link rel="stylesheet" href="infCampaigns.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,16 +12,16 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">
       <i class="fa-solid fa-bullhorn"></i>
-      <h2>Influencers</h2>
+      <h2>Campaigns</h2>
     </div>
-  <ul class="sidebar-menu">
-    <li><a href="influencer.html">Influencers</a></li>
-    <li><a href="packages.html">Packages</a></li>
-    <li><a href="infCampaigns.html">Campaigns</a></li>
-    <li><a href="infClients.html">Clients</a></li>
-    <li><a href="infAnalytics.html">Analytics</a></li>
-  </ul>
-</aside>
+    <ul class="sidebar-menu">
+      <li><a href="influencer.html">Influencers</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li class="active"><a href="infCampaigns.html">Campaigns</a></li>
+      <li><a href="infClients.html">Clients</a></li>
+      <li><a href="infAnalytics.html">Analytics</a></li>
+    </ul>
+  </aside>
 
   <!-- ===== Main Wrapper ===== -->
   <div class="main-wrapper">
@@ -31,88 +30,89 @@
         <i class="fa fa-bars"></i>
       </div>
       <div class="search-box">
-        <input type="text" placeholder="Search influencers..." />
+        <input type="text" placeholder="Search campaigns..." />
       </div>
     </header>
 
   <main class="content">
     <div class="content-header">
       <div>
-        <h1>Influencers</h1>
-        <p>Manage your influencer partnerships</p>
+        <h1>Campaigns</h1>
+        <p>Manage your marketing campaigns</p>
       </div>
       <div class="filters">
         <select>
           <option>All Status</option>
-          <option>Active</option>
-          <option>Pending</option>
+          <option>Ongoing</option>
           <option>Completed</option>
+          <option>Waiting for Payment</option>
         </select>
-        <button class="add-btn">Add influencer</button>
+        <button class="add-btn">Add Campaign</button>
       </div>
     </div>
 
     <table>
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Category</th>
-          <th>Pricing</th>
+          <th>Campaign Name</th>
+          <th>Client</th>
+          <th>Budget</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><div class="user"><span class="avatar">SJ</span> Sarah Johnson</div></td>
-          <td>Fashion</td>
+          <td>Fashion Summer</td>
+          <td>Brand A</td>
           <td>$5000</td>
-          <td><span class="status active">Active</span></td>
+          <td><span class="status ongoing">Ongoing</span></td>
           <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
         </tr>
         <tr>
-          <td><div class="user"><span class="avatar">MC</span> Mike Chen</div></td>
-          <td>Tech</td>
+          <td>Tech Launch</td>
+          <td>Brand B</td>
           <td>$3500</td>
-          <td><span class="status active">Active</span></td>
-          <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
-        </tr>
-        <tr>
-          <td><div class="user"><span class="avatar">ED</span> Emma Davis</div></td>
-          <td>Lifestyle</td>
-          <td>$4200</td>
-          <td><span class="status pending">Pending</span></td>
-          <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
-        </tr>
-        <tr>
-          <td><div class="user"><span class="avatar">AT</span> Alex Turner</div></td>
-          <td>Gaming</td>
-          <td>$6000</td>
           <td><span class="status completed">Completed</span></td>
+          <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+          <td>Lifestyle Promo</td>
+          <td>Brand C</td>
+          <td>$4200</td>
+          <td><span class="status waiting">Waiting for Payment</span></td>
+          <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
+        </tr>
+        <tr>
+          <td>Gaming Collab</td>
+          <td>Brand D</td>
+          <td>$6000</td>
+          <td><span class="status ongoing">Ongoing</span></td>
           <td class="actions"><i class="fa fa-edit"></i> <i class="fa fa-trash"></i></td>
         </tr>
       </tbody>
     </table>
   </main>
-<!-- ===== كارت التعديل (Popup) ===== -->
+
+<!-- ===== Edit Campaign Popup ===== -->
 <div id="editPopup" class="popup hidden">
   <div class="popup-content">
-    <h3>Edit Influencer</h3>
+    <h3>Edit Campaign</h3>
     <form id="editForm">
-      <label>Name:</label>
+      <label>Campaign Name:</label>
       <input type="text" id="editName" required>
 
-      <label>Category:</label>
-      <input type="text" id="editCategory" required>
+      <label>Client:</label>
+      <input type="text" id="editClient" required>
 
-      <label>Pricing ($):</label>
-      <input type="number" id="editPricing" required>
+      <label>Budget ($):</label>
+      <input type="number" id="editBudget" required>
 
       <label>Status:</label>
       <select id="editStatus">
-        <option value="Active">Active</option>
-        <option value="Pending">Pending</option>
+        <option value="Ongoing">Ongoing</option>
         <option value="Completed">Completed</option>
+        <option value="Waiting for Payment">Waiting for Payment</option>
       </select>
 
       <div class="popup-buttons">
@@ -122,24 +122,25 @@
     </form>
   </div>
 </div>
-<!-- Add Influencer Popup -->
+
+<!-- Add Campaign Popup -->
 <div class="popup hidden" id="addPopup">
   <div class="popup-content">
-    <h3>Add New Influencer</h3>
-    <label>Name</label>
-    <input type="text" id="addName" placeholder="Enter influencer name">
+    <h3>Add New Campaign</h3>
+    <label>Campaign Name</label>
+    <input type="text" id="addName" placeholder="Enter campaign name">
 
-    <label>Category</label>
-    <input type="text" id="addCategory" placeholder="Enter category">
+    <label>Client</label>
+    <input type="text" id="addClient" placeholder="Enter client name">
 
-    <label>Pricing</label>
-    <input type="number" id="addPricing" placeholder="Enter pricing">
+    <label>Budget</label>
+    <input type="number" id="addBudget" placeholder="Enter budget">
 
     <label>Status</label>
     <select id="addStatus">
-      <option value="Active">Active</option>
-      <option value="Pending">Pending</option>
+      <option value="Ongoing">Ongoing</option>
       <option value="Completed">Completed</option>
+      <option value="Waiting for Payment">Waiting for Payment</option>
     </select>
 
     <div class="popup-buttons">
@@ -149,8 +150,6 @@
   </div>
 </div>
 
-
-
-  <script src="influencer.js"></script>
+<script src="infCampaigns.js"></script>
 </body>
 </html>

@@ -130,3 +130,4 @@ function saveInfluencerPayment() {
   document.getElementById("influencerAmount").value = "";
   document.getElementById("influencerStatus").value = "Completed";
 }
+

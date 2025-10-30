@@ -31,26 +31,6 @@ header h2 {
   color: #334155;
 }
 
-.search-bar {
-  flex: 1;
- margin-left: 25px;
-}
-
-.search-bar input {
-  width: 50%;
-  padding: 10px 10px;
-  border-radius: 10px;
-  border: 1px solid #cbd5e1;
-  background: #f8fafc;
-  transition: 0.3s ease;
-}
-
-.search-bar input:focus {
-  border-color: #254d64;
-  background: #fff;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
-}
-
 /* ===== STATS SECTION ===== */
 .stats {
   display: flex;
