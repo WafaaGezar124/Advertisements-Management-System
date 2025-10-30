@@ -1,0 +1,8 @@
+/* يخلي المحتوى يبدأ بعد الـ navbar */
+body {
+    padding-top: 70px;
+    /* عدّل القيمة حسب ارتفاع الـ navbar */
+    background-color: #f8f9fa;
+    /* خلفية فاتحة احترافية */
+    font-family: 'Inter', sans-serif;
+}
