@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   padding: 15px 25px;
   background-color: #fff;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
 .menu-icon i {
@@ -44,6 +44,7 @@ body {
   border-color: #0f4a43;
   background-color: #fffcfc;
 }
+
 .sidebar-menu a {
   text-decoration: none;
   color: white;
@@ -108,10 +109,11 @@ table {
   border-radius: 10px;
   border-collapse: collapse;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 16px;
 }
@@ -139,7 +141,7 @@ tr:not(:last-child) {
 }
 
 .status {
-     text-transform: capitalize;
+  text-transform: capitalize;
   padding: 5px 12px;
   border-radius: 12px;
   font-size: 12px;
@@ -164,9 +166,10 @@ tr:not(:last-child) {
 .actions i {
   cursor: pointer;
   margin-right: 10px;
-   color: #aaa;
+  color: #aaa;
   transition: color 0.2s ease;
 }
+
 .actions i:hover {
   color: #0f4a43;
 }
@@ -177,7 +180,7 @@ tr:not(:last-child) {
 }
 
 .content-header p {
-  color: #999; 
+  color: #999;
   margin-top: 4px;
 }
 
@@ -188,7 +191,7 @@ tr:not(:last-child) {
   border-radius: 6px;
   padding: 8px 14px;
   cursor: pointer;
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 .add-btn:hover {
@@ -238,9 +241,17 @@ tbody tr:hover {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 /* ===== Modern Popup (Edit Card) ===== */
 .popup {
   position: fixed;
@@ -263,7 +274,7 @@ tbody tr:hover {
   border-radius: 20px;
   padding: 30px 25px;
   width: 400px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   animation: scaleIn 0.25s ease;
   transition: all 0.3s ease;
 }
@@ -300,7 +311,7 @@ tbody tr:hover {
 .popup-content select:focus {
   border-color: #0f4a43;
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 .popup-buttons {
@@ -309,6 +320,7 @@ tbody tr:hover {
   margin-top: 25px;
   gap: 10px;
 }
+
 .save-btn {
   background-color: #0f4a43;
   color: white;
@@ -325,16 +337,25 @@ tbody tr:hover {
   border-radius: 8px;
   cursor: pointer;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ===== Sidebar Sliding ===== */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -230px; /* مخفية في البداية */
+  left: -230px;
+  /* مخفية في البداية */
   width: 230px;
   height: 100vh;
   background-color: #0f4a43;
@@ -343,13 +364,14 @@ tbody tr:hover {
   flex-direction: column;
   align-items: start;
   padding: 20px 0;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: left 0.3s ease;
 }
 
 .sidebar.active {
-  left: 0; /* تظهر */
+  left: 0;
+  /* تظهر */
 }
 
 .sidebar-logo {

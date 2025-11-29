@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2ceCaeY9hAo=",
+  "dgSpecHash": "8Acgzo4Hofk=",
   "success": true,
   "projectFilePath": "C:\\Users\\technology comp\\Downloads\\Full Stack .Net_depi\\Advertisements Management System\\advertisments_system_mvc\\advertisments_system_mvc.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\technology comp\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.0\\microsoft.entityframeworkcore.tools.10.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

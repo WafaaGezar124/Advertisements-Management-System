@@ -1,4 +1,3 @@
-/* ===== BODY ===== */
 body {
     color: #eee;
     min-height: 100vh;
@@ -6,13 +5,12 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== Dashboard Container ===== */
+
 .dashboard-container {
     display: flex;
     height: 100%;
 }
 
-/* ===== Main Content ===== */
 .main-content {
     flex: 1;
     padding: 30px 50px;
@@ -31,7 +29,7 @@ body {
     color: #256D6F;
 }
 
-/* ===== Buttons ===== */
+
 .btn-add,
 #savePostBtn {
     background: #256D6F;
@@ -47,7 +45,7 @@ body {
     background: #1d5a5c;
 }
 
-/* ===== Calendar ===== */
+
 #calendar {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -55,32 +53,28 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== FullCalendar Text Colors ===== */
 
-/* الأيام في الشبكة */
 .fc-daygrid-day-number {
     color: #256D6F !important;
-    /* يخلي أرقام الأيام بيضا */
+
 }
 
-/* نص الأحداث */
 .fc-event-title {
     color: #256D6F !important;
-    /* يخلي عنوان الحدث واضح */
+
 }
 
-/* الساعات في عرض الأسبوع أو اليوم */
+
 .fc-timegrid-slot-label {
     color: #256D6F !important;
-    /* يخلي نص الساعات باين */
+
 }
 
-/* عناوين الأيام (Mon, Tue, ...الخ) */
 .fc-col-header-cell-cushion {
     color: #256D6F !important;
 }
 
-/* عنوان الشهر في الأعلى */
+
 .fc-toolbar-title {
     color: #256D6F !important;
 }
